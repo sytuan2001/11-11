@@ -59,3 +59,29 @@ function chuyenDoiTien() {
     document.getElementById('result').innerHTML =
         "Result: " + ketQua + " " + sangDonVi;
 }
+// máy tính
+function congMayTinh() {
+    var number1 = document.getElementById('num1').value;
+    var number2 = document.getElementById('num2').value;
+    var result = Number(number1)+Number(number2);
+    document.getElementById('result').innerHTML = result;
+}
+function truMayTinh() {
+    var number1 = document.getElementById('num1').value;
+    var number2 = document.getElementById('num2').value;
+    var result = Number(number1)-Number(number2);
+    document.getElementById('result').innerHTML = result;
+}
+function nhanMayTinh() {
+    var number1 = document.getElementById('num1').value;
+    var number2 = document.getElementById('num2').value;
+    var result = Number(number1)*Number(number2);
+    document.getElementById('result').innerHTML = result;
+}
+function chiaMayTinh() {
+    var number1 = document.getElementById('num1').value;
+    var number2 = document.getElementById('num2').value;
+    var result = Number(number1)/Number(number2);
+    document.getElementById('result').innerHTML = result;
+}
+
