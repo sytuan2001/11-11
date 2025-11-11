@@ -39,3 +39,23 @@ function tinhChuVi() {
         "Bán kính: " + r + "<br>" +
         "Chu vi hình tròn: " + chuVi.toFixed(2);
 }
+// chuyển đổi tiền tệ
+function chuyenDoiTien() {
+    var soTien = parseFloat(document.getElementById('amount').value);
+    var tuDonVi = document.getElementById('fromCurrency').value;
+    var sangDonVi = document.getElementById('toCurrency').value;
+
+    var tyGia = {
+        VND: 26000,
+        USD: 1,
+        EUR: 0.92,
+        JPY: 149
+    };
+
+    var soTienUSD = soTien / tyGia[tuDonVi];
+    var ketQua = soTienUSD * tyGia[sangDonVi];
+
+    // Trả về giá trị sau khi chuyển đổi
+    document.getElementById('result').innerHTML =
+        "Result: " + ketQua + " " + sangDonVi;
+}
